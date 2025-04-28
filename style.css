@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+}
+.login-box h2 {
+  color: #00796b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login-box input,
+.tab input,
+.tab button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.login-box button {
+  background: #00796b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.main-app {
+  display: none;
+  height: 100vh;
+  display: flex;
+}
+.sidebar {
+  width: 220px;
+  background: #00796b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.sidebar h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+#home {
+  position: relative;
+  background-image: url('https://media.istockphoto.com/id/1224227498/photo/alarm-clock-and-pills.jpg?s=612x612&w=0&k=20&c=DzZWlZZP-hNCt4xxXAYKbjdgrSss3umcWtUpUA6iEFQ=');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  color: black;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 0;
+}
+#home * {
+  position: relative;
+  z-index: 1;
+}
+#calendar .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+#calendar .calendar div {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#calendar .calendar div:hover {
+  background-color: #00796b;
+  color: white;
+}
+#calendar .calendar div.selected {
+  background-color: #00796b;
+  color: white;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.about-container h1 {
+  color: #00796b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.about-container a {
+  color: #00796b;
+  text-decoration: underline;
+}
+.about-container ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.about-container li {
+  margin-bottom: 8px;
+}
